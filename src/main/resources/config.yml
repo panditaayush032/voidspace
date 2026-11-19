@@ -1,0 +1,16 @@
+# Keep this file private. Never copy the service_role/secret key into your Netlify website.
+supabase:
+  url: 'https://YOUR_PROJECT_REF.supabase.co'
+  service-role-key: 'PASTE_SERVICE_ROLE_KEY_HERE'
+
+# This bridge is intentionally for the MAIN PAPER SERVER ONLY.
+server-id: 'main-paper'
+
+sync:
+  # How often to refresh stats and the online-player list (seconds).
+  interval-seconds: 30
+  # Number of leaderboard rows the website should display; plugin syncs all seen players.
+  # Playtime is stored in seconds.
+
+logging:
+  verbose: true

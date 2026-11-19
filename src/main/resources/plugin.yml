@@ -1,0 +1,16 @@
+name: VoidSpaceBridge
+version: '${version}'
+main: mc.voidspace.bridge.VoidSpaceBridge
+api-version: '1.21'
+softdepend: [Vault, LuckPerms]
+author: VoidSpace MC
+description: Sends main Paper server player data to the VoidSpace MC website through Supabase.
+commands:
+  voidspacebridge:
+    description: Show VoidSpace bridge status or force a sync.
+    usage: /voidspacebridge status|sync
+    permission: voidspacebridge.admin
+permissions:
+  voidspacebridge.admin:
+    description: Allows bridge status and manual sync commands.
+    default: op

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'mc.voidspace'
+version = '1.0.0'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    // Paper 26.3 as requested. If Paper's published API version differs, update this line
+    // to the exact API version shown by your server's Paper build.
+    compileOnly 'io.papermc.paper:paper-api:26.3-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+    compileOnly 'net.luckperms:api:5.4'
+}
+
+processResources {
+    filesMatching('plugin.yml') { expand(version: project.version) }
+}
