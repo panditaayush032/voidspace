@@ -18,8 +18,10 @@ repositories {
 dependencies {
     // Paper 26.3 as requested. If Paper's published API version differs, update this line
     // to the exact API version shown by your server's Paper build.
-    compileOnly 'io.papermc.paper:paper-api:26.3.build.+'
-    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+    compileOnly 'io.papermc.paper:paper-api:26.3.build.+
+    compileOnly('com.github.MilkBowl:VaultAPI:1.7') {
+    exclude group: 'org.bukkit', module: 'bukkit'
+}
     compileOnly 'net.luckperms:api:5.4'
 }
 
